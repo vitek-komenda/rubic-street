@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
+import { Caveat } from "next/font/google";
 import "./globals.css";
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-caveat",
+});
 
 export const metadata: Metadata = {
   title: "Rubic's Street",
-  description: "An interactive 3D street scene inspired by Erno Rubik and the Mirror Cube.",
+  description:
+    "An interactive 3D street scene inspired by Erno Rubik and the Mirror Cube.",
 };
 
 export default function RootLayout({
@@ -12,15 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={caveat.variable}>
       <body>{children}</body>
     </html>
   );

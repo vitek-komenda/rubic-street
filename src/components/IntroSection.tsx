@@ -38,7 +38,7 @@ export function IntroSection() {
           lineHeight: 1.2,
         }}
       >
-        Rubic&apos;s Street Idea
+        Rubic&apos;s Street Idea [WIP!]
       </h1>
 
       <p
